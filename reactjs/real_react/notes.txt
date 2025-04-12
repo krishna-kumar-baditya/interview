@@ -1,0 +1,107 @@
+rendering process can be divided into two parts
+1.  Render Phase
+2.  Commit Phase
+
+diffing algorithm
+reconcilation occurs between two phase of rendering
+
+Ques 1: What is React and why is it used?
+ans .
+react is a popular js library used for building user interfaces (UIs) for web applications.
+why
+-   it's known for its efficiency,flexibilty and reusabilty in creating interactive UI components
+-   it allows developers to build complex UIs by breaking them down into smaller, reusable pieces called components.
+-   These components can manage their own states, making it easier to build and maintain large-scale apllications.
+
+Ques 2: what is jsx and why is it used?
+ans .
+javascript XML
+It allows to write HTML like code within JS
+It is used in react to define the structire of components
+
+Ques 3: What is React component?
+ans.
+reusable building block for the UI
+it can be a class or function that returns JSX
+
+Ques 4: what is the difference between state and props?
+ans.
+Mutabilty : state is mutable and managed within the component itself,while props are immutable and passed from parent to child components.
+Ownership : components own and manage their own state,while props are owned and manged by the parent component.
+Usage : state is used for inernal component data that might change over time,
+while props are used to pass data from parent to child components.
+
+Ques 5: what is prop drilling
+ans .
+process of passing down props through multiple levels of nested components
+ex.
+function GrandparentComponent(){
+    const data = "Hello from parent"
+    return  (
+        <>
+            <h1>Hello</h1>
+            <ParentComponent data={data}/>
+        </>
+    )
+}
+function ParentComponent({data}){
+    return  <ChildComponent data={data} />
+}
+function ChildComponent({data}){
+    return  <GrandChildComponent data={data} />
+      
+}
+function GrandChildComponent(props){
+    return  <p>{props.data} in child component</p>
+}
+
+Ques 6: What is a React fragment, and why is it used?
+React fragment is a way to group multiple elements without adding an extra HTML element to the DOM
+
+Ques 7: How do you define and use state in a React Functional component? How are they different from normal variables?
+const Counter = ()=>{
+    const [count,setCount] = React.useState(0)
+    const normalcount = 0
+    const increment = ()=>{
+        setCount(count + 1)
+        normalcount = normalcount + 1   //  it does not incresed
+    }
+    return(
+        <>
+        <p>Count : {count} </p>
+        <p>NormalCount : {normalcount} </p>
+
+        <button type="button" onClick={increment} >Increment</button>
+        </>
+    )
+}
+
+Ques 8: How do you define and use state in a React class component?
+Ques 9: How do you pass props to a functional component?
+Ques 10: What are PropTypes?
+PropTypes in React are used for runtime type checking of props passed to components. This helps in catching bugs and ensuring that the data received by a component is of the expected type. PropTypes were originally part of the React core module but have since been moved to a separate package called prop-types
+
+Ques 11: How do you use props in a class component?
+Ques 12: In how many ways can we export/import things from a JS Module?
+ans.
+two ways 
+default  and named export/import
+default
+-   use it when we want to export something by default
+-   multiple default exports are not allowed
+-   we can refer to the default exported thing bt any name
+named 
+-   use it when we have multiple things to be exported from a JS Module
+-   Named exports must be referred to by the exact same name while importing them
+Ques 13: What is Virtual DOM?
+a logical representation of the actual dom in the form of react element
+a programming concept where a virtual representation of the UI is kept in the memory.
+It is an object that has react element to represent the UI
+Ques 14: Reconciliation vs Rendering?
+-   Reconciliation: the process of computing the diff between the 2 VDOM
+-   Rendering: The actual updation of the informtion in the rendering enviroment
+
+Ques 15: What is the Diff Algorithm?
+-   whenever the state or props get updated, an updated VDOM tree is generated.
+-   Diff algorithm calculates the difference between the 2 VDOM's (the previous dom and the updated dom)
+-   after calculating this difference only the actual dom is updated.This makes react capable of doing fast DOM manipulation.
