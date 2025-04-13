@@ -1,4 +1,4 @@
-let str = "Hello, How are you"
+// let str = "Hello, How are you"
 // Q1 convert str in only 1 array
 // Q2 convert string to array with reach character
 // Q3 convert string to array with space or any sequence
@@ -26,13 +26,27 @@ let str = "Hello, How are you"
 // console.log(str.substring(1,str.length));
 
 // Q8 remove string before specific character
-console.log(str.substring(0,str.indexOf('o')));
+// console.log(str.substring(0,str.indexOf('o')));
 
 // Q9 remove extra space from both side
-let string = " dngjnldn "
-console.log(string.trim());
+// let string = " dngjnldn "
+// console.log(string.trim());
 
 // Q10 reverse a string
-let temp = str.split("")
-console.log(temp.reverse());
-console.log(temp.join(""));
+// let temp = str.split("")
+// console.log(temp.reverse());
+// console.log(temp.join(""));
+
+// let str = "krishna kumar"
+// console.log(str.charAt(2));
+// console.log(str.charCodeAt(2));
+
+// let text = "Apple, Banana, Kiwi"
+// console.log(text.substring(7,13));
+let str = "   HELLO   "
+// console.log(str.toLowerCase());
+console.log(str.trimStart());
+
+
+
+

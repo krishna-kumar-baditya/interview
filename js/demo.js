@@ -93,7 +93,33 @@
 // z.name = "adil"
 // console.log(a.name);
 
-console.log(+true);
-console.log(!"abc");
-console.log(+"abc");
+// console.log(+true);
+// console.log(!"abc");
+// console.log(+"abc");
 
+// let name = null;
+// let displayName = name ?? "Guest";
+// console.log(displayName); // "Guest"
+
+// let count = 0;
+// let result = count ?? 10;
+// console.log(result); // 0 ✅
+
+// let name = null ?? 'John'
+// console.log(name);
+
+
+let color = "red";
+
+switch (color) {
+  case "red":
+  case "maroon":
+  case "crimson":
+    console.log("This is a shade of red");
+    break;
+  case "blue":
+    console.log("It's blue");
+    break;
+  default:
+    console.log("Unknown color");
+}
