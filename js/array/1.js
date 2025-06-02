@@ -13,8 +13,8 @@
 // console.log(is_array('w3resource'));
 // console.log(is_array([1, 2, 4, 0]));
 
-let fruits = ["orange","banana","apple"]
-console.log(fruits.at(11));
+// let fruits = ["orange","banana","apple"]
+// console.log(fruits.at(11));
 
-delete fruits[1]
-console.log(fruits);
+// delete fruits[1]
+// console.log(fruits);

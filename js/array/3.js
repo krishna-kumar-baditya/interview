@@ -13,6 +13,7 @@
 // []
 
 function first(arr,n){
+    console.log(n);
     
     if (arr == null){
         return undefined

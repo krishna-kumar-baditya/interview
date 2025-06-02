@@ -15,7 +15,8 @@ function last(arr,n){
         return void 0
     }
     if(n == null){
-        return arr[arr.length - 1]
+        // return arr[arr.length - 1]
+        return arr.at(-1)
     }
     return arr.splice(Math.max(arr.length - n,0))
 }

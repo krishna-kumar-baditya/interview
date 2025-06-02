@@ -1,4 +1,3 @@
-
 // const property = "firstname"
 // const name = "krishna kumar baditya"
 
@@ -10,8 +9,7 @@
 // console.log(user);
 // console.log(user.firstname);
 
-
-// 
+//
 // const person = {
 //     name : "krishna kumar",
 //     age : 24,
@@ -19,7 +17,7 @@
 // }
 // for(let key in person){
 //     console.log(person[key]);
-    
+
 // }
 
 // Q1
@@ -47,7 +45,7 @@
 // }
 // console.log(nums);
 
-// Q3 output of the following code 
+// Q3 output of the following code
 // const a = {}
 // const b = {key : "b"}
 // const c = {key : "c"}
@@ -127,40 +125,69 @@
 // console.log({a : 1} === {a : 1});//false
 
 // Q12
-let person = {name : "krishna"}
-const members = [person]
-person.name = null
-console.log(members);
+// let person = {name : "krishna"}
+// const members = [person]
+// person.name = null
+// console.log(members);
 // [ { name: 'krishna' } ]
 // [ { name: null } ]
 
-
 // Q13
-const value = {number : 10}
-const multiply = (x = {...value})=>{
-    console.log((x.number *=2));
-    
-}
+// const value = {number : 10}
+// const multiply = (x = {...value})=>{
+//     console.log((x.number *=2));
 
-multiply()//20
-multiply()//20
-multiply(value)//20
-multiply(value)//40
+// }
+
+// multiply()//20
+// multiply()//20
+// multiply(value)//20
+// multiply(value)//40
 
 // Q14
-function changeAgeAndReference(person){
-    person.age = 20
-    person = {
-        name : "jedi",
-        age : 50
-    }
-    return person
+// function changeAgeAndReference(person){
+//     person.age = 20
+//     person = {
+//         name : "jedi",
+//         age : 50
+//     }
+//     return person
 
-}
-const person1 = {
-    name : "krishna",
-    age : 30
-}
-const person2 = changeAgeAndReference(person1)
-console.log(person1); //{ name: 'krishna', age: 20 }
-console.log(person2); //{ name: 'jedi', age: 50 }
+// }
+// const person1 = {
+//     name : "krishna",
+//     age : 30
+// }
+// const person2 = changeAgeAndReference(person1)
+// console.log(person1); //{ name: 'krishna', age: 20 }
+// console.log(person2); //{ name: 'jedi', age: 50 }
+
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+//     this.sayHello = function () {
+//         console.log(`Hi, I'm ${this.name}`);
+//     };
+// }
+
+// const user1 = new Person("Alice", 25);
+// const user2 = new Person("Bob", 32);
+
+// user1.sayHello(); // Hi, I'm Alice
+// user2.sayHello(); // Hi, I'm Bob
+
+// function Student(fname,lname,age,cls){
+//     this.fname = fname;
+//     this.lname = lname;
+//     this.age = age;
+//     this.cls = cls;
+//     return this
+// }
+// let std1 = new Student("krishna","baditya",10,5)
+// console.log(std1);
+// std1.greet = function(){
+//     console.log('Hello');
+// }
+// std1.nationality = "Indian"
+// console.log(std1);
+
